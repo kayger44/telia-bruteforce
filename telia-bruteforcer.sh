@@ -7,7 +7,7 @@
 #       Version: 1.0
 #
 #       Created: 2021-12-02 (00:37:00)
-#      Modified: 2021-12-04 (02:35:53)
+#      Modified: 2021-12-04 (03:17:43)
 #
 #           iRC: wuseman (Libera/EFnet/LinkNet) 
 #       Website: https://www.nr1.nu/
@@ -176,8 +176,16 @@ banner
 b=$(echo ${board}|awk -F'-' '{print tolower($2)}')                                                                                                        
 f=$(echo ${firmware}|sed 's/\.//g'|awk -F'-' '{print $1,$2}'|sed 's/...$//'|sed "s/ /${b}/g")                                                             
 
+wget -h|grep -q "\-\-spider" 
+if [[ $? -ne "0" ]]; then
+    wget="wget -s"
+else
+    wget="wget --spider"
+fi
+
+
 for n in $(seq -w 0 999) ; do                                                                                                                              
-    wget -s ${remote_ip}/${f}${n}closed.${file_format} &> /dev/null;                                                                                      
+    $wget ${remote_ip}/${f}${n}closed.${file_format} &> /dev/null;                                                                                      
     if [[ $? = "0" ]]; then                                                                                                                               
         echo -e "[\e[1;32m+\e[0m] -- Firmware Was Found: ${f}${n}closed.${file_format}, downloading..."                                           
         curl -H 'TeliaSoneraCompany AB/5.0 (Go Cry!)' ${remote_ip}/${f}${n}closed.${file_format} -o /mnt/usb/USB-A/vdnt-o/firmware/1720339/${f}${n}closed.${file_format} -o /dev/null -#;
