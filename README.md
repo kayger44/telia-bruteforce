@@ -10,10 +10,12 @@
 
 ## How To Getting Started:
 
+```sh
      git clone git://github.com/wuseman/telia-bruteforcer.git
      cd telia-bruteforcer
+```
 
-     Open telia-bruteforcer.sh, change the field below:
+- Open telia-bruteforcer.sh, change the field below:
  
             board="VDNT-O" 
             firmware="17.2.0405-1901068-20201215160859"
@@ -23,11 +25,13 @@
 
      When you have edited the file, run the script as below:
 
-         sh ./telia-bruteforcer.sh -d -p /tmp 
+ ```sh
+sh ./telia-bruteforcer.sh -d -p /tmp 
 
-              -d|--download      | Download firmwares
-              -p|--path          | Path to store firmware files
+    -d|--download      | Download firmwares
+    -p|--path          | Path to store firmware files
 
+```
 
 ## Notice
 
