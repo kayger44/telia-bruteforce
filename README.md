@@ -1,11 +1,14 @@
 # Telia Bruteforcer
 
+- In action.
+
 ![Screenshot](.previews/telia-bruteforcer.gif)
+
+- It is really simple to get started, this tool should work for other ISPS too that hosting rbi files and other firmware files
+
 ![Screenshot](.previews/telia_bruteforcer_howto.gif)
 
 This is a bruteforce tool for hunting rbi files.
-
-This tool should work for all other internet providers that hosting rbi files for technicolor routers
 
 ## How To Getting Started:
 
