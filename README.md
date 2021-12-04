@@ -8,8 +8,6 @@
 
 ![Screenshot](.previews/telia_bruteforcer_howto.gif)
 
-This is a bruteforce tool for hunting rbi files.
-
 ## How To Getting Started:
 
      git clone git://github.com/wuseman/telia-bruteforcer.git
