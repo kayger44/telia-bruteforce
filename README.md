@@ -11,21 +11,23 @@
 ## How To Getting Started:
 
 ```sh
-     git clone git://github.com/wuseman/telia-bruteforcer.git
-     cd telia-bruteforcer
+git clone git://github.com/wuseman/telia-bruteforcer.git
+cd telia-bruteforcer
 ```
 
 - Open telia-bruteforcer.sh, change the field below:
  
-            board="VDNT-O" 
-            firmware="17.2.0405-1901068-20201215160859"
-            server_ssl=false
-            server_ip=131.116.22.230
-            file_format="rbi"
+```sh
+board="VDNT-O" 
+firmware="17.2.0405-1901068-20201215160859"
+server_ssl=false
+server_ip=131.116.22.230
+file_format="rbi"
+```
 
-     When you have edited the file, run the script as below:
+- When you have edited the file, run the script as below:
 
- ```sh
+```sh
 sh ./telia-bruteforcer.sh -d -p /tmp 
 
     -d|--download      | Download firmwares
